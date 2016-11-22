@@ -1,0 +1,3 @@
+INDEX VERSION 1.129+C:\Users\ETY2\Downloads\DTA_TP_JoelT\.metadata\.plugins\org.eclipse.jdt.core
+701982210.index
+2323996625.index

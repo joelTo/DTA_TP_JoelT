@@ -9,3 +9,6 @@
 
 ## TP2
 * Creation d'une application permettant d'effectuer les opérations dites élémentaires d'opération
+
+## TP3
+* Création d'une application console sur des données de pizza, pour faire du CRUD.
