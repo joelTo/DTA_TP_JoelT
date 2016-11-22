@@ -2,7 +2,7 @@
 
 ## TP1 
 * Utilisation des lignes de commande afin de créer, compiler, puis exécuter un programme en Java
-* idem ... Avec la mise en args et son utilisation
+* Idem ... Avec la mise en args et son utilisation
 * Realisation et génération de documentation en javadoc
 * Creation puis excution en ligne de commande d'un fichier .jar
 
