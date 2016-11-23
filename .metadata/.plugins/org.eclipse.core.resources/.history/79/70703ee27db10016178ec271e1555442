@@ -1,0 +1,23 @@
+package fr.pizzeria.model;
+
+public class Pizza {
+	
+	Integer id;
+	String code;
+	String nom;
+	Double prix;
+	Integer nbPizzas;
+
+	
+	public Pizza(Integer id, String code, String nom, Double prix){
+		this.id=id;
+		this.code=code; 
+		this.nom=nom;
+		this.prix=prix;
+		
+	public static void ajouterUnePizza(String[] Tab_pizza){
+		
+		}
+	}
+}
+

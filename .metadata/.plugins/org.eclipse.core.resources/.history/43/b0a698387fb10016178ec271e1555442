@@ -1,0 +1,31 @@
+package fr.pizzeria.model;
+
+public class Pizza {
+	
+	Integer id;
+	String code;
+	String nom;
+	Double prix;
+	Integer nbPizzas;
+
+	
+	public Pizza(Integer id, String code, String nom, Double prix){
+		this.id=id;
+		this.code=code; 
+		this.nom=nom;
+		this.prix=prix;
+	}	
+	
+	
+	public static void affichagePizza( Pizza[] Tab_Pizza){
+		int taille= Tab_Pizza.length;
+		 
+		 // Utilisation d'une boucle <for()> afin d'éviter et s'adapter au nombre de ligne
+		 for(int i=0;i<taille;i++){
+			 System.out.println(Tab_Pizza[i].code + " -> " + Tab_Pizza[i].nom +" ("+ Tab_Pizza[i].prix +" €)" );
+		 }
+		 System.out.println("***** ------------------------*****");
+		}
+	
+}
+

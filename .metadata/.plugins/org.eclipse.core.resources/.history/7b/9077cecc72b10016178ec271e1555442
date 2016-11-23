@@ -1,0 +1,12 @@
+package fr.pizzeria.console.PizzeriaAdminConsoleApp;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Pizza[]= new Pizza[2];
+
+	}
+
+}
