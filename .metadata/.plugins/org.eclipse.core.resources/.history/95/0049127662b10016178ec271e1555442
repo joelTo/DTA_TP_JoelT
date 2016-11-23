@@ -2,26 +2,12 @@ package fr.pizzeria.console;
 
 import java.util.Scanner;
 
-/**
- * Class : PizzeriaAdminConsoleApp
- * Permet la création d'une application console sur des données de pizza, pour faire du CRUD
- * 1. Lister les pizzas
- * 2. Ajouter une nouvelle pizza
- * 3. Mettre à jour une pizza
- * 4. Supprimer une pizza
- * @author ETY2
- *
- */
-
 public class PizzeriaAdminConsoleApp {
 	public static Scanner sc = new Scanner (System.in);
-	
-	// Début du main
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// Creation de la liste des pizzas
-		String[][] pizza ={{"0","PEP","P�p�roni","12,50"},
+		String[][] pizza ={{"0","PEP","P�p�roni","12,50"},
 						   {"1","MAR","Margherita","14,00"},
 		 				   {"2","REI","La Reine", "11,00"},
 		 				   {"3","FRO","Le 4 fromages","12,00"},
@@ -31,7 +17,7 @@ public class PizzeriaAdminConsoleApp {
 		 				   {"7","IND","L'indenne","14,00"}};
 		
 		
-		// Variable de sortie de la boucle d'affichage du menu
+		
 		Boolean Arret = false;
 		
 		
@@ -40,7 +26,7 @@ public class PizzeriaAdminConsoleApp {
 		System.out.println("***** Pizzeria Administration *****");
 		System.out.println("1. Lister les pizzas");
 		System.out.println("2. Ajouter une nouvelle pizza ");
-		System.out.println("3. Mettre � jour une pizza");
+		System.out.println("3. Mettre � jour une pizza");
 		System.out.println("4. Supprimer une pizza");
 		System.out.println("99. Sortir");
 		System.out.println("***** ------------------------*****");
@@ -66,38 +52,23 @@ public class PizzeriaAdminConsoleApp {
 				Arret = true;
 					} 
 		}while(Arret == false);
+		
+		
+		
+		
+		
 		sc.close();
+
 	}
-	
-	// Fin du main
-	
-	
-	/** 
-	 * Pour afficher la liste des pizzas
-	 * sous la forme suivant:
-	 * <Alias_Pizza> -> <Nom_Pizza> (Prix_Pizza)
-	 * 
-	 * Exemple:
-	 * PEP -> Pépéroni (12.50 €)
-	 * 
-	 * @param Un tableau double String[][]
-	 * @return Rien (Affichage écran)
-	 */
 	public static void affichagePizza(String[][] pizza){
 		 int taille= pizza.length;
-		 
-		 // Utilisation d'une boucle <for()> afin d'éviter et s'adapter au nombre de ligne
+
 		 for(int i=0;i<taille;i++){
-			 System.out.println(pizza[i][1] + " -> " + pizza[i][2] +" ("+ pizza[i][3] +" �)" );
+			 System.out.println(pizza[i][1] + " -> " + pizza[i][2] +" ("+ pizza[i][3] +" �)" );
 		 }
 		 System.out.println("***** ------------------------*****");
 	}
 	
-	/**
-	 * Pour ajouter une pizza 
-	 * @param Un tableau double String[][]
-	 * @return Un tableau double String[][]
-	 */
 	public static String[][] ajouterUnePizza(String[][] pizza){
 		 int taille= pizza.length;
 		 
@@ -110,9 +81,10 @@ public class PizzeriaAdminConsoleApp {
 			 pizza2[i][2]=pizza[i][2];
 			 pizza2[i][3]=pizza[i][3];
 		 }
-		 
 		 pizza2[taille][0]=String.valueOf(taille);
 		 System.out.println("Veuillez entrer Alias de votre pizza");
+		 
+		
 		 String saisi = sc.next();
 		 pizza2[taille][1]=saisi;
 		 
@@ -129,11 +101,6 @@ public class PizzeriaAdminConsoleApp {
 		 return pizza2;
 	}
 	
-	/**
-	 * Pour faire la mise à jour d'un élément de la liste des pizzas
-	 * @param Un tableau double String[][]
-	 * @return Un tableau double String[][]
-	 */
 	public static String[][] miseAJour(String[][] pizza){
 		affichagePlusPlus(pizza);
 		 
@@ -157,11 +124,6 @@ public class PizzeriaAdminConsoleApp {
 		return pizza;
 	}
 	
-	/**
-	 * Pour supprimer une pizza 
-	 * @param Un tableau double String[][]
-	 * @return Un tableau double String[][]
-	 */
 	public static String[][] supprimerUnePizza(String[][] pizza){
 		affichagePlusPlus(pizza);
 		System.out.println("Quelle pizza voulez-vous supprimer ? ");
@@ -189,20 +151,12 @@ public class PizzeriaAdminConsoleApp {
 	}
 	
 	
-	/**
-	 * Pour un affichage ++
-	 * sous la forme :
-	 * <N°> ) <Alias_Pizza> -> <Nom_Pizza> (Prix_Pizza)
-	 * 
-	 * Exemple:
-	 * 0) PEP -> Pépéroni (12,50 €)
-	 * @param Un tableau double String[][]
-	 */
+		
 	public static void affichagePlusPlus(String[][] pizza){
 		 int taille= pizza.length;
 
 		 for(int i=0;i<taille;i++){
-			 System.out.println(pizza[i][0] +") "+pizza[i][1] + " -> " + pizza[i][2] +" ("+ pizza[i][3] +" �)" );
+			 System.out.println(pizza[i][0] +") "+pizza[i][1] + " -> " + pizza[i][2] +" ("+ pizza[i][3] +" �)" );
 		 }
 		 
 	}

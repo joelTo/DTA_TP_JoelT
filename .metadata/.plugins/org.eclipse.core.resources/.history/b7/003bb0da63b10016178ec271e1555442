@@ -73,20 +73,19 @@ public class PizzeriaAdminConsoleApp {
 	
 	
 	/** 
-	 * Pour afficher la liste des pizzas
+	 * Fonction pour afficher la liste des pizzas
 	 * sous la forme suivant:
 	 * <Alias_Pizza> -> <Nom_Pizza> (Prix_Pizza)
 	 * 
 	 * Exemple:
 	 * PEP -> Pépéroni (12.50 €)
 	 * 
-	 * @param Un tableau double String[][]
-	 * @return Rien (Affichage écran)
+	 * @param pizza
+	 * @return rien (affichage écran)
 	 */
 	public static void affichagePizza(String[][] pizza){
 		 int taille= pizza.length;
-		 
-		 // Utilisation d'une boucle <for()> afin d'éviter et s'adapter au nombre de ligne
+
 		 for(int i=0;i<taille;i++){
 			 System.out.println(pizza[i][1] + " -> " + pizza[i][2] +" ("+ pizza[i][3] +" �)" );
 		 }
@@ -94,8 +93,8 @@ public class PizzeriaAdminConsoleApp {
 	}
 	
 	/**
-	 * Pour ajouter une pizza 
-	 * @param Un tableau double String[][]
+	 * 
+	 * @param pizza
 	 * @return Un tableau double String[][]
 	 */
 	public static String[][] ajouterUnePizza(String[][] pizza){
@@ -110,9 +109,10 @@ public class PizzeriaAdminConsoleApp {
 			 pizza2[i][2]=pizza[i][2];
 			 pizza2[i][3]=pizza[i][3];
 		 }
-		 
 		 pizza2[taille][0]=String.valueOf(taille);
 		 System.out.println("Veuillez entrer Alias de votre pizza");
+		 
+		
 		 String saisi = sc.next();
 		 pizza2[taille][1]=saisi;
 		 
@@ -129,11 +129,6 @@ public class PizzeriaAdminConsoleApp {
 		 return pizza2;
 	}
 	
-	/**
-	 * Pour faire la mise à jour d'un élément de la liste des pizzas
-	 * @param Un tableau double String[][]
-	 * @return Un tableau double String[][]
-	 */
 	public static String[][] miseAJour(String[][] pizza){
 		affichagePlusPlus(pizza);
 		 
@@ -157,11 +152,6 @@ public class PizzeriaAdminConsoleApp {
 		return pizza;
 	}
 	
-	/**
-	 * Pour supprimer une pizza 
-	 * @param Un tableau double String[][]
-	 * @return Un tableau double String[][]
-	 */
 	public static String[][] supprimerUnePizza(String[][] pizza){
 		affichagePlusPlus(pizza);
 		System.out.println("Quelle pizza voulez-vous supprimer ? ");
@@ -189,15 +179,7 @@ public class PizzeriaAdminConsoleApp {
 	}
 	
 	
-	/**
-	 * Pour un affichage ++
-	 * sous la forme :
-	 * <N°> ) <Alias_Pizza> -> <Nom_Pizza> (Prix_Pizza)
-	 * 
-	 * Exemple:
-	 * 0) PEP -> Pépéroni (12,50 €)
-	 * @param Un tableau double String[][]
-	 */
+		
 	public static void affichagePlusPlus(String[][] pizza){
 		 int taille= pizza.length;
 
