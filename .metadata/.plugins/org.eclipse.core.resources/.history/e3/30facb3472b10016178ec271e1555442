@@ -1,0 +1,16 @@
+package fr.pizzeria.model;
+
+public class Pizza {
+	
+	Integer id;
+	String code;
+	String nom;
+	Double prix;
+	Integer nbPizzas;
+
+	
+	public Pizza(Integer id){
+		
+	}
+}
+
