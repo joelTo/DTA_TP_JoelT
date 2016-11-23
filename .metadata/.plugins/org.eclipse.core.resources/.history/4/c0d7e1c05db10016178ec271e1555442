@@ -46,7 +46,7 @@ public class PizzeriaAdminConsoleApp {
 				pizza=miseAJour(pizza);
 				break;
 			case 4 :
-				pizza=supprimerUnePizza(pizza);
+				supprimerUnePizza(pizza);
 				break;
 			case 99:
 				Arret = true;
