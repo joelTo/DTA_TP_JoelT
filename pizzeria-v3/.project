@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>pizzeria-v3</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>pizzeria-console-objet</name>
+			<type>2</type>
+			<location>C:/Users/ETY2/Downloads/DTA_TP_JoelT/TP5-6/formation-dta-112016/pizzeria-console-objet</location>
+		</link>
+	</linkedResources>
+</projectDescription>
