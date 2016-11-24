@@ -1,0 +1,23 @@
+package fr.pizzeria.model.menu;
+
+import fr.pizzeria.model.Pizza.Pizza;
+
+public class AfficherLesPizzas extends MenuAbstract{
+	public AfficherLesPizzas(){
+		super();
+	}
+
+	public String recupererNomMenu(){
+		return "AfficherLesPizzas";
+	}
+	
+	public void retournerAffichage(){
+		System.out.println("1. Lister les pizzas");
+	}
+	
+	public void action(Pizza[] tab){
+		
+	}
+	
+
+}

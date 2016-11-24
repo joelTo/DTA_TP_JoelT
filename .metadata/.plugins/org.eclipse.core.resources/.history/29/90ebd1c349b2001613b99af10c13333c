@@ -1,0 +1,29 @@
+package fr.pizzeria.model.menu;
+
+import fr.pizzeria.model.Pizza.Pizza;
+
+public class AfficherLesPizzas extends MenuAbstract{
+	public AfficherLesPizzas(){
+		super();
+	}
+
+	public String recupererNomMenu(){
+		return "AfficherLesPizzas";
+	}
+
+	public void retournerAffichage(){
+		System.out.println("1. Lister les pizzas");
+	}
+
+	public void action(Pizza[] tab){
+		int taille= tabPizza.length;
+
+		// Utilisation d'une boucle <for()> afin d'éviter et s'adapter au nombre de ligne
+		for(int i=0;i<taille;i++){
+			System.out.println(tabPizza[i].code + " -> " + tabPizza[i].nom +" ("+ tabPizza[i].prix +" €)" );
+		}
+		System.out.println("***** ------------------------*****");
+		return;
+	}
+
+}

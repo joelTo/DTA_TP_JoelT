@@ -1,0 +1,6 @@
+package fr.pizzeria.model.menu;
+
+public class AfficherLesPizzas {
+	
+
+}

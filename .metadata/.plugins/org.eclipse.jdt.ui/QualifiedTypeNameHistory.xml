@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="fr.pizzeria.model.Pizza.Pizza"/>
+<fullyQualifiedTypeName name="fr.pizzeria.model.menu.MenuAbstract"/>
+<fullyQualifiedTypeName name="fr.pizzeria.model.menu.AfficherLesPizzas"/>
+<fullyQualifiedTypeName name="fr.pizzeria.model.menu.AjouterUnePizza"/>
+</qualifiedTypeNameHistroy>

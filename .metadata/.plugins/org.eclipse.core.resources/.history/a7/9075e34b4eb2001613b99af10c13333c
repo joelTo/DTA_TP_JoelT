@@ -1,0 +1,34 @@
+package fr.pizzeria.model.menu;
+
+//     fr.pizzeria.model.Pizza;
+import fr.pizzeria.model.Pizza.Pizza;
+
+// Importation de librairie de liste
+import java.util.List;
+
+public  class MenuAbstract {
+	private Integer nbMenu;
+	private List<String>  menu;
+	
+	public MenuAbstract(){
+		nbMenu++;
+	}
+	public void rajouterUnMenu(String Nom){
+		menu.add(Nom);
+		
+	}
+	
+	
+	public  String recupererNomMenu(){
+		return "";
+	}
+	public  void retournerAffichage(){
+		
+	}
+	
+	public  void action(Pizza[] tab){
+		
+	}
+		
+}
+

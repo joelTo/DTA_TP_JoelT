@@ -1,0 +1,20 @@
+package fr.pizzeria.model.menu;
+
+public class AjouterUnePizza extends MenuAbstract{
+	
+	public AjouterUnePizza(){
+		super();
+	}
+
+	public String recupererNomMenu(){
+		return "AjouterUnePizza";
+	}
+	
+	public void retournerAffichage(){
+		System.out.println("2. Ajouter une nouvelle pizza ");
+	}
+	
+	public void action(){
+		
+	}
+}

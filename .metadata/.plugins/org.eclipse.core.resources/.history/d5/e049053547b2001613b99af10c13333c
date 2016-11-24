@@ -1,0 +1,13 @@
+package fr.pizzeria.model.menu;
+
+public abstract class MenuAbstract {
+	private Integer nbMenu;
+	
+	
+	
+	public  String recupererNomMenu(){
+		return;
+	}
+		
+}
+

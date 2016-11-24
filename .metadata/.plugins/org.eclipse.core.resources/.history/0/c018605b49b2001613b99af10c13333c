@@ -1,0 +1,17 @@
+package fr.pizzeria.model.menu;
+
+import  fr.pizzeria.model.Pizza;
+
+public abstract class MenuAbstract {
+	private Integer nbMenu;
+	
+	
+	public MenuAbstract(){
+		nbMenu++;
+	}
+	public abstract String recupererNomMenu();
+	public abstract void retournerAffichage();
+	public abstract void action();
+		
+}
+

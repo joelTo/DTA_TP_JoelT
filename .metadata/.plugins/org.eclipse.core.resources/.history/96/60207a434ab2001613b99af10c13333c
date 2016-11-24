@@ -1,0 +1,12 @@
+package fr.pizzeria.model.main;
+
+import fr.pizzeria.model.menu.*;
+import fr.pizzeria.model.Pizza.*;
+public class main {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

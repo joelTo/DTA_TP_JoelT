@@ -5,16 +5,103 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2016-11-23T13:42:45Z</updated>
+  <updated>2016-11-23T19:59:00Z</updated>
   <entry>
-    <title>First milestone of next generation Spring Data released</title>
+    <title>Spring Cloud Data Flow 1.1 GA released</title>
+    <link rel="alternate" href="https://spring.io/blog/2016/11/23/spring-cloud-data-flow-1-1-ga-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Pollack</name>
+    </author>
+    <id>tag:spring.io,2016-11-23:2709</id>
+    <updated>2016-11-23T19:59:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the team, I am pleased to announce the GA release of Spring Cloud Data Flow 1.1.  Follow the links in the &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#getting-started"&gt;getting started guide&lt;/a&gt; to download the local server implementation and shell to create Stream and Tasks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;General highlights of the 1.1 GA Release include:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Builds upon Spring Boot 1.4, Spring Cloud Camden SR2, Spring Integration 4.3 and Spring Cloud Task 1.1 release improvements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adds &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#configuration-security-ldap-authentication"&gt;LDAP&lt;/a&gt;, &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#configuration-security-basic-authentication"&gt;Basic&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#configuration-security-file-based-authentication"&gt;File&lt;/a&gt; based backend authentication&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Improvements to &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#configuration-security-oauth2"&gt;OAUTH backed authentication&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#_ldap_transport_security"&gt;LDAP authentication&lt;/a&gt; is now supported with SSL&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adds a form-based login page for non-OAUTH backend authentication methods such as the LDAP, Basic and File-based options&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adds the ability to &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#_inline_vs_file_reference_properties_2"&gt;pass application specific properties via YAML file&lt;/a&gt;.  This is particularly useful when deploying streams that require many deployment properties to be set.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Portable deployment properties for memory, disk and cpu are in place for support across various runtime implementations.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Documentation for the core &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#api-guide"&gt;REST API&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Updated reference documentation showing how to integrate with &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#_spring_boot_admin"&gt;Spring Boot Admin to visualize server metrics&lt;/a&gt; and how to &lt;a href="http://docs.spring.io/spring-cloud-dataflow/docs/1.1.0.RELEASE/reference/htmlsingle/#_monitoring_deployed_applications"&gt;export Stream/Task application metrics to external application monitoring tools&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;UI Highlights include:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Bulk import and registration of stream and task app-starters&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bulk import support for Task definitions. This allows importing task definitions from a file or the ability to add multiple task-definitions using the Flo-editor (&lt;a href="https://drive.google.com/file/d/0BxM1nows33aTV2xHa3VfMV90MG8"&gt;video demonstration&lt;/a&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Adds Flo’s visual representation of running streams&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add visual representation for related streams. This representation also includes nested TAPs and the downstream processing nodes in an overall topology view.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="imageblock"&gt;
+&lt;div class="content"&gt;
+&lt;img src="https://raw.githubusercontent.com/spring-cloud/spring-cloud-dataflow/master/spring-cloud-dataflow-docs/src/main/asciidoc/images/dataflow-nested-tap-streams.png" alt="Visualization of Taps"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;List pages now support sorting&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Server-side search support for stream and task list pages&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For the complete list of features, bug-fixes, and improvements, please refer to the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/milestones?state=closed"&gt;closed 1.1 family of GitHub issues&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We welcome feedback and contributions! If you have any questions, comments or suggestions, please let us know via &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub Issues&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-dataflow"&gt;StackOverflow&lt;/a&gt;, or using the #SpringCloudDataFlow hashtag on Twitter.&lt;/p&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>First milestone of next-generation Spring Data released</title>
     <link rel="alternate" href="https://spring.io/blog/2016/11/23/first-milestone-of-next-generation-spring-data-released" />
     <category term="releases" label="Releases" />
     <author>
       <name>Oliver Gierke</name>
     </author>
     <id>tag:spring.io,2016-11-23:2708</id>
-    <updated>2016-11-23T13:42:45Z</updated>
+    <updated>2016-11-23T13:42:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the Spring Data team, I’d like to announce the first milestone of the Kay release train. This is a special release train as it&amp;rsquo;s going to ship a new generation of Spring Data that will include a couple of breaking changes going forward.&lt;/p&gt;&lt;h2&gt;&lt;a href="#infrastructure-upgrades" class="anchor" name="infrastructure-upgrades"&gt;&lt;/a&gt;Infrastructure upgrades&lt;/h2&gt;
 &lt;p&gt;The first and most noticeable change is the upgrade to Java 8 as a minimum baseline (no JDK 6 compatibility anymore) and an upgrade to Spring 5 as framework foundation. In subsequent milestones we&amp;rsquo;re going to ship some significant internal rewrites that will also affect user facing API to make use of the new language features in JDK 8.&lt;/p&gt;&lt;h2&gt;&lt;a href="#support-for-reactive-data-access" class="anchor" name="support-for-reactive-data-access"&gt;&lt;/a&gt;Support for reactive data access&lt;/h2&gt;
 &lt;p&gt;The most significant additions that made it into the milestone is the addition of support for reactive data access for selected stores. This means: reactive Spring Data repositories and templates for MongoDB, Cassandra and Redis. Other stores are going to follow with subsequent milestones. The introduction of reactive data access support for MongoDB also required us to finally switch from the legacy &lt;code&gt;DBObject&lt;/code&gt; API to MongoDB&amp;rsquo;s current &lt;code&gt;Document&lt;/code&gt; one.&lt;/p&gt;
@@ -1537,19 +1624,5 @@ Issues&lt;/a&gt;, or via the comments section. You can also ping me
     <content type="html">&lt;p&gt;Speaker: &lt;a href="https://www.twitter.com/starbuxman"&gt;Josh Long&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hi Spring fans! In this tip, we&amp;rsquo;ll quickly look at how to build messaging-based microservices using Spring Cloud Stream&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/HQ00E60kB6c" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 1.4.2 Available Now</title>
-    <link rel="alternate" href="https://spring.io/blog/2016/11/08/spring-boot-1-4-2-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2016-11-08:2689</id>
-    <updated>2016-11-08T17:49:18Z</updated>
-    <content type="html">&lt;p&gt;It is my pleasure to announce that Spring Boot &lt;code&gt;1.4.2&lt;/code&gt; has been released and is available now from &lt;a href="http://repo.spring.io/release"&gt;repo.spring.io&lt;/a&gt; and &lt;a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.springframework.boot%22"&gt;Maven Central&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;Spring Boot 1.4.2 includes &lt;a href="https://github.com/spring-projects/spring-boot/milestone/73?closed=1"&gt;over 100 fixes, improvements and 3rd party dependency updates&lt;/a&gt;! Thanks to all that have contributed!&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask at &lt;a href="http://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="http://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"&gt;Documentation&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>
