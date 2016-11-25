@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\Users\ETY2\Downloads\DTA_TP_JoelT\TP5-6\formation-dta-112016\pizzeria-console-objet" key="org.eclipse.jdt.ui.last.external.project"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>
 		<item value="false" key="updateSimilarElements"/>

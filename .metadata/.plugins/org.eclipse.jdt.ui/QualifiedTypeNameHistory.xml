@@ -4,4 +4,5 @@
 <fullyQualifiedTypeName name="fr.pizzeria.model.menu.MenuAbstract"/>
 <fullyQualifiedTypeName name="fr.pizzeria.model.menu.AfficherLesPizzas"/>
 <fullyQualifiedTypeName name="fr.pizzeria.model.menu.AjouterUnePizza"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

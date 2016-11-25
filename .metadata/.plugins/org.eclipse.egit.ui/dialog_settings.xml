@@ -10,14 +10,14 @@
 		<list key="C:\Users\ETY2\Downloads\DTA_TP_JoelT\.git">
 			<item value="false"/>
 			<item value="joel T &lt;joel.torib@gmail.com&gt;"/>
-			<item value="TP4"/>
+			<item value="# WARNING: head commit changed in the meantime&#x0D;&#x0A;&#x0D;&#x0A;TP4"/>
 			<item value="joel T &lt;joel.torib@gmail.com&gt;"/>
-			<item value="59fc06b47bbd5cb233d317001bc779a8de96b575"/>
+			<item value="4312ce3fa3356629f045b71c0ce123499a846e9e"/>
 		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
-		<item value="200,200" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="STAGING_SASH_FORM_WEIGHT"/>
 		<item value="false" key="sortItemState"/>
-		<item value="200,200" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
 	</section>
 </section>
