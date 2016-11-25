@@ -1,0 +1,18 @@
+package fr.pizzeria.dao;
+
+import fr.pizzeria.model.Pizza;
+
+public interface PizzaDao {
+
+	Pizza[] findAll();
+	void save(String code,String nom,Double prix);
+	void supprime(int numPizzaSupprimee);
+	void update(String numPizza,String code,String nom,Double prix);
+}
+
+public interface Stockage {
+	Pizza[] findAllPizzas();
+	void saveNewPizza(Pizza pizza) throws SavePizzaException;
+	void updatePizza(String codePizza, Pizza pizza) throws UpdatePizzaException;
+	void deletePizza(String codePizza) throws DeletePizzaException;
+}

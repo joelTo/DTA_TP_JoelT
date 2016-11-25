@@ -1,0 +1,61 @@
+package fr.pizzeria.dao;
+
+import fr.pizzeria.model.Pizza;
+
+public class PizzaDaoTableau implements PizzaDao{
+
+	private Pizza[] pizzas = {
+			new Pizza(0, "MAR", "Margherita", 14),
+			new Pizza(1, "ORI", "Oriental", 16),
+	};
+
+	public int tailleTableauPizza(){
+		return pizzas.length;
+	}
+
+	@Override
+	public Pizza[] findAll() {
+		return pizzas;
+	}
+
+	@Override
+	public void save(String code,String nom,Double prix)// throws SavePizzaException {
+		/*
+		if(){
+			throw new SavePizzaException();
+		}*/
+		int taille= pizzas.length;
+		Pizza[] tabPizza2 = new Pizza[taille+1];
+		for(int i=0;i<taille;i++){
+			tabPizza2[i]=pizzas[i];
+		}
+		Pizza pizzaAjoutee= new Pizza(taille,code,nom,prix);
+		tabPizza2[taille]=pizzaAjoutee;
+		pizzas=tabPizza2;
+
+		System.out.println(pizzas.length);
+
+	}
+
+	public void supprime(int numPizzaSupprimee){
+		int taille= pizzas.length;
+		Pizza[] pizza2 = new Pizza[taille-1];
+		int u =0;
+		for(int i=0;i<taille;i++){
+			if(numPizzaSupprimee==i){
+				continue;
+			}
+			pizza2[u]=pizzas[i];
+			u++;
+		}
+		pizzas=pizza2;
+	}
+
+
+	public void update(String numPizza,String code,String nom,Double prix){
+		Pizza pizzaModifiee= new Pizza(Integer.parseInt(numPizza),code,nom,prix);
+		pizzas[Integer.parseInt(numPizza)]=pizzaModifiee;
+
+	}
+
+}

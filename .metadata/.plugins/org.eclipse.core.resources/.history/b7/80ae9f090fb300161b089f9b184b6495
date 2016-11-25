@@ -1,0 +1,33 @@
+package fr.pizzeria.console;
+
+import java.util.Scanner;
+
+import fr.pizzeria.dao.PizzaDaoTableau;
+import fr.pizzeria.ihm.IhmUtil;
+import fr.pizzeria.ihm.MainMenu;
+
+public class PizzeriaAdminConsoleApp {
+
+	
+
+	
+	public static void main(String[] args) {
+		//	initPizzas();
+		//	printMenu();
+	
+		IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), new PizzaDaoTableau());
+
+		MainMenu Core = new MainMenu(ihmUtil);
+		
+		ArrayList<String> list = new ArrayList<String>() {{
+		    add("A");
+		    add("B");
+		    add("C");
+		}};
+		
+		while (true) {
+			Core.displayMenu();
+			Core.parseAndExec();
+		}
+	}
+}
