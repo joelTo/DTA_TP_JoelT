@@ -1,2 +1,4 @@
 Servers/*
-.recommenders
+.recommenders/
+.metadata/
+RemoteSystemsTempFiles/
