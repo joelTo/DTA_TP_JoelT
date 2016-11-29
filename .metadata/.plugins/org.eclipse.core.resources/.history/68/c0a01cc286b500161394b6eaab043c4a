@@ -1,0 +1,15 @@
+package fr.test.blabla;
+
+/**
+ * Created by ETY8 on 28/11/2016.
+ */
+public class AAAA {
+    public String _public = "var public";
+    protected String _protected = "var protected";
+    String _default = "var default";
+    private String _private = "var private";
+
+    public void affiche() {
+        System.out.print("tototo");
+    }
+}
