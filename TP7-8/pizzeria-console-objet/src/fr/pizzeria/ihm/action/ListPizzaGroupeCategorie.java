@@ -1,5 +1,7 @@
 package fr.pizzeria.ihm.action;
 
+import java.util.Collections;
+
 import fr.pizzeria.ihm.IhmUtil;
 import fr.pizzeria.model.Pizza;
 
@@ -15,8 +17,10 @@ public class ListPizzaGroupeCategorie extends Action {
 
 	@Override
 	public void doAction() {
-		System.out.println("Affichage des pizzas par catégories");
-		this.ihmUtil.getPizzaDao().findAll().stream().map(Pizza::getCatPizza).forEach(System.out::println);
+		System.out.println("Affichage des pizzas par catï¿½gories");
+		// this.ihmUtil.getPizzaDao().findAll().stream().collect(Collectors.groupingBy(Pizza::getCatPizza))
+		// .forEach(System.out::println);
+		this.ihmUtil.getPizzaDao().findAll().stream().collect(Collections.groupingBy(Pizza -> Pizza::getCatPizza));
 	}
 
 	@Override
