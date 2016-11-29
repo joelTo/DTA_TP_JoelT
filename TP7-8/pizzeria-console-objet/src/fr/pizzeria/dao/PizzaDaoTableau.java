@@ -17,10 +17,6 @@ public class PizzaDaoTableau implements PizzaDao {
 		}
 	};
 
-	public ArrayList<Pizza> FindGroupe() {
-		return pizzas;
-	}
-
 	@Override
 	public ArrayList<Pizza> findAll() {
 		return pizzas;

@@ -17,6 +17,4 @@ public interface PizzaDao {
 
 	void update(String numPizza, String code, String nom, Double prix) throws UpdatesPizzaException;
 
-	ArrayList<Pizza> FindGroupe();
-
 }
