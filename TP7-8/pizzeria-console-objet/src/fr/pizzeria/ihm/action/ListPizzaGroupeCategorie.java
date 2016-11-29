@@ -10,13 +10,13 @@ public class ListPizzaGroupeCategorie extends Action {
 	public ListPizzaGroupeCategorie(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("1. Lister les pizzas");
+		this.setDescription("Liste les pizza par groupe categorie");
 	}
 
 	@Override
 	public void doAction() {
 		System.out.println("Affichage des pizzas par catégories");
-		this.ihmUtil.getPizzaDao().findAll().stream().map(Pizza::getCode).forEach(System.out::println);
+		this.ihmUtil.getPizzaDao().findAll().stream().map(Pizza::getCatPizza).forEach(System.out::println);
 	}
 
 	@Override

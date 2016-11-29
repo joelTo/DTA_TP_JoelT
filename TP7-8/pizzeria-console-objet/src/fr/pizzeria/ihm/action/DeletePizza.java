@@ -9,7 +9,7 @@ public class DeletePizza extends Action {
 
 	public DeletePizza(IhmUtil e) {
 		super();
-		this.setDescription("4. Supprimer une pizza");
+		this.setDescription("Supprimer une pizza");
 		this.ihmUtil = e;
 	}
 

@@ -1,9 +1,10 @@
 package fr.pizzeria.ihm.action;
 
+import java.util.stream.Stream;
+
 import fr.pizzeria.exception.UpdatesPizzaException;
-//import java.util.Scanner;
-//import fr.pizzeria.dao.PizzaDao;
 import fr.pizzeria.ihm.IhmUtil;
+import fr.pizzeria.model.CategoriePizza;
 
 public class UpdatePizza extends Action {
 
@@ -11,7 +12,7 @@ public class UpdatePizza extends Action {
 
 	public UpdatePizza(IhmUtil e) {
 		super();
-		this.setDescription("3. Mettre à jour une pizza");
+		this.setDescription("Mettre à jour une pizza");
 		this.ihmUtil = e;
 	}
 
@@ -19,17 +20,25 @@ public class UpdatePizza extends Action {
 	public void doAction() throws UpdatesPizzaException {
 		System.out.println("");
 		System.out.println("Quelle pizza voulez-vous modifier ? ");
-		String numPizzaModiffier=ihmUtil.getScanner().next();
+		String numPizzaModiffier = ihmUtil.getScanner().next();
 
 		System.out.println("Veuillez entrer la modification de l'Alias de votre Pizza");
-		String saisieAlias=ihmUtil.getScanner().next();
+		String saisieAlias = ihmUtil.getScanner().next();
 
 		System.out.println("Veuillez entrer la modification  du nom de votre Pizza");
 		String saisieNom = ihmUtil.getScanner().next();
 
 		System.out.println("Veuillez entrer la modification  du prix de votre Pizza");
 		Double saisiePrix = ihmUtil.getScanner().nextDouble();
-		ihmUtil.getPizzaDao().update(numPizzaModiffier,saisieAlias,saisieNom ,saisiePrix);
+
+		System.out.println("Veuillez entrer le Catégorie de la nouvelle pizza s'il vous plait");
+		Stream.of(CategoriePizza.values())
+				.forEach(System.out::println); /* Lister les enum créé */
+
+		String catPizza = ihmUtil.getScanner().next();
+
+		ihmUtil.getPizzaDao().update(numPizzaModiffier, saisieAlias, saisieNom, CategoriePizza.valueOf(catPizza),
+				saisiePrix);
 	}
 
 	@Override

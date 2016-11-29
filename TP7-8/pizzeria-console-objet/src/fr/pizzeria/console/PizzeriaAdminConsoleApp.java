@@ -11,14 +11,14 @@ import fr.pizzeria.ihm.MainMenu;
 
 public class PizzeriaAdminConsoleApp {
 
+	public static Boolean Arret = false;
+
 	public static void main(String[] args) {
 		// initPizzas();
 		// printMenu();
 
 		IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), new PizzaDaoTableau());
 		MainMenu Core = new MainMenu(ihmUtil);
-
-		Boolean Arret = false;
 
 		while (Arret == false) {
 			Core.displayMenu();

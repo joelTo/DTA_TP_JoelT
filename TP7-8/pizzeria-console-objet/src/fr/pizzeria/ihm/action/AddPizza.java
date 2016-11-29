@@ -1,7 +1,10 @@
 package fr.pizzeria.ihm.action;
 
+import java.util.stream.Stream;
+
 import fr.pizzeria.exception.SavePizzaException;
 import fr.pizzeria.ihm.IhmUtil;
+import fr.pizzeria.model.CategoriePizza;
 
 public class AddPizza extends Action {
 
@@ -9,7 +12,7 @@ public class AddPizza extends Action {
 
 	public AddPizza(IhmUtil ihmUtil) {
 		super();
-		this.setDescription("2. Ajouter une nouvelle pizza");
+		this.setDescription("Ajouter une nouvelle pizza");
 		this.ihmUtil = ihmUtil;
 	}
 
@@ -21,9 +24,16 @@ public class AddPizza extends Action {
 		String code = ihmUtil.getScanner().next();
 		System.out.println("Veuillez entrer le nom de la nouvelle pizza s'il vous plait");
 		String nom = ihmUtil.getScanner().next();
+		System.out.println("Veuillez entrer le Catégorie de la nouvelle pizza s'il vous plait");
+		Stream.of(CategoriePizza.values())
+				.forEach(System.out::println); /* Lister les enum créé */
+
+		String catPizza = ihmUtil.getScanner().next();
+
 		System.out.println("Veuillez entrer le prix de la nouvelle pizza s'il vous plait");
 		Double prix = ihmUtil.getScanner().nextDouble();
-		ihmUtil.getPizzaDao().save(code, nom, prix);
+
+		ihmUtil.getPizzaDao().save(code, nom, CategoriePizza.valueOf(catPizza), prix);
 
 	}
 

@@ -1,5 +1,9 @@
 package fr.pizzeria.ihm.action;
 
+import java.util.Comparator;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import fr.pizzeria.ihm.IhmUtil;
 import fr.pizzeria.model.Pizza;
 
@@ -9,18 +13,21 @@ public class ListPizzaTarifEleve extends Action {
 	public ListPizzaTarifEleve(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("1. Lister les pizzas");
+		this.setDescription("Liste la Pizza au Tarif le plus éleve");
 
 	}
 
 	@Override
 	public void doAction() {
 		System.out.println("je liste le prix le plus élevé par moins élevé");
-		this.ihmUtil.getPizzaDao().findAll().stream().map(Pizza::getPrix).filter(t -> t > t)
-				.forEach(System.out::println);
+		this.ihmUtil.getPizzaDao().findAll().stream().collect(Collectors.groupingBy(Pizza::getPrix));
+		Optional<Pizza> max = this.ihmUtil.getPizzaDao().findAll().stream().max(Comparator.comparing(Pizza::getPrix));
+		System.out.println(max.get());
+
 	}
 
 	public void describeAction() {
 		System.out.println(this.getDescription());
 	}
+
 }
