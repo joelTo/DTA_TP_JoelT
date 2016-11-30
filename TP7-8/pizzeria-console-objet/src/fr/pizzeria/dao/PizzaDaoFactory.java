@@ -8,7 +8,7 @@ import fr.pizzeria.exception.UpdatesPizzaException;
 import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 
-public interface PizzaDao {
+public interface PizzaDaoFactory {
 
 	ArrayList<Pizza> findAll();
 

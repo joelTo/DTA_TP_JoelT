@@ -2,14 +2,14 @@ package fr.pizzeria.ihm;
 
 import java.util.Scanner;
 
-import fr.pizzeria.dao.PizzaDao;
+import fr.pizzeria.dao.PizzaDaoFactory;
 
 public class IhmUtil {
 	
 	private Scanner scanner;
-	private PizzaDao pizzaDao;
+	private PizzaDaoFactory pizzaDao;
 
-	public IhmUtil(Scanner scanner, PizzaDao pizzaDao) {
+	public IhmUtil(Scanner scanner, PizzaDaoFactory pizzaDao) {
 		super();
 		this.scanner = scanner;
 		this.pizzaDao = pizzaDao;
@@ -19,7 +19,7 @@ public class IhmUtil {
 		return this.scanner;
 	}
 	
-	public PizzaDao getPizzaDao() {
+	public PizzaDaoFactory getPizzaDao() {
 		return this.pizzaDao;
 	}
 

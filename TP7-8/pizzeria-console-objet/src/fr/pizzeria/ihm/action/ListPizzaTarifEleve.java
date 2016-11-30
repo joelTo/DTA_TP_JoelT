@@ -13,13 +13,13 @@ public class ListPizzaTarifEleve extends Action {
 	public ListPizzaTarifEleve(IhmUtil ihmUtil) {
 		super();
 		this.ihmUtil = ihmUtil;
-		this.setDescription("Liste la Pizza au Tarif le plus éleve");
+		this.setDescription("Liste la Pizza au Tarif le plus ï¿½leve");
 
 	}
 
 	@Override
 	public void doAction() {
-		System.out.println("je liste le prix le plus élevé par moins élevé");
+		System.out.println("je liste le prix le plus Ã©levÃ© par moins Ã©levÃ©");
 		this.ihmUtil.getPizzaDao().findAll().stream().collect(Collectors.groupingBy(Pizza::getPrix));
 		Optional<Pizza> max = this.ihmUtil.getPizzaDao().findAll().stream().max(Comparator.comparing(Pizza::getPrix));
 		System.out.println(max.get());

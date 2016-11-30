@@ -24,9 +24,9 @@ public class AddPizza extends Action {
 		String code = ihmUtil.getScanner().next();
 		System.out.println("Veuillez entrer le nom de la nouvelle pizza s'il vous plait");
 		String nom = ihmUtil.getScanner().next();
-		System.out.println("Veuillez entrer le Catégorie de la nouvelle pizza s'il vous plait");
+		System.out.println("Veuillez entrer le Catï¿½gorie de la nouvelle pizza s'il vous plait");
 		Stream.of(CategoriePizza.values())
-				.forEach(System.out::println); /* Lister les enum créé */
+				.forEach(System.out::println); /* Lister les enum crï¿½ï¿½ */
 
 		String catPizza = ihmUtil.getScanner().next();
 

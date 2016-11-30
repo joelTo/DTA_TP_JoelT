@@ -3,6 +3,7 @@ package fr.pizzeria.console;
 import java.util.Scanner;
 
 import fr.pizzeria.dao.PizzaDaoTableau;
+import fr.pizzeria.dao.TraitementFichiers;
 import fr.pizzeria.exception.DeletePizzaException;
 import fr.pizzeria.exception.SavePizzaException;
 import fr.pizzeria.exception.UpdatesPizzaException;
@@ -19,6 +20,9 @@ public class PizzeriaAdminConsoleApp {
 
 		IhmUtil ihmUtil = new IhmUtil(new Scanner(System.in), new PizzaDaoTableau());
 		MainMenu Core = new MainMenu(ihmUtil);
+
+		TraitementFichiers t = new TraitementFichiers();
+		t.printlistFile();
 
 		while (Arret == false) {
 			Core.displayMenu();
