@@ -18,7 +18,8 @@ public class PizzaDaoFichier implements PizzaDaoFactory {
 	}
 
 	public void save(String code, String nom, CategoriePizza catPizza, Double prix) throws SavePizzaException {
-		return;
+		Pizza pizza = new Pizza(10, code, nom, catPizza, prix);
+		saveFile();
 	}
 
 	public void supprime(int numPizzaSupprimee) throws DeletePizzaException {

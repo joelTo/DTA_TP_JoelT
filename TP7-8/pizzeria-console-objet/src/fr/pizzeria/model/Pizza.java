@@ -17,6 +17,7 @@ public class Pizza {
 	}
 
 	private static int nbPizzas;
+	
 
 	public Pizza(int id, String code, String nom, CategoriePizza catPizza, double prix) {
 		super();

@@ -1,6 +1,8 @@
 package fr.pizzeria.dao;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -32,7 +34,7 @@ public class TraitementFichiers {
 		return stringList;
 	}
 
-	public void saveFile(Pizza pizza) throws SavePizzaException {
+	public void saveFile(Pizza pizza) throws SavePizzaException, IOException {
 		if (isPresent(pizza)) {
 			/**
 			 * Pour dire que le code de cette pizza existe deja
@@ -42,11 +44,20 @@ public class TraitementFichiers {
 		writePizza(pizza);
 	}
 
-	private void writePizza(Pizza pizza) {
+	/**
+	 * Ecriture dans un fichier texte sources :
+	 * http://www.ukonline.be/programmation/java/tutoriel/chapitre12/page4.php
+	 * 
+	 * @param pizza
+	 * @throws IOException
+	 */
+	private void writePizza(Pizza pizza) throws IOException {
 		// Path f = Paths.get(file + "/" + pizza.getCode() + ".txt");
 		File f = new File(file + "/" + pizza.getCode() + ".txt");
-		f
-		Files(f, (pizza.getNom() + ";" + pizza.getPrix() + ";" + pizza.getCatPizza()));
+		String pizzaString = pizza.getNom() + ";" + pizza.getPrix() + ";" + pizza.getCatPizza();
+		FileWriter fw = new FileWriter(pizzaString);
+		fw.close();
+
 	}
 
 	/**
