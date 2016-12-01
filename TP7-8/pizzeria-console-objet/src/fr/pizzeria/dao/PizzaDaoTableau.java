@@ -8,7 +8,7 @@ import fr.pizzeria.exception.UpdatesPizzaException;
 import fr.pizzeria.model.CategoriePizza;
 import fr.pizzeria.model.Pizza;
 
-public class PizzaDaoTableau implements PizzaDao {
+public class PizzaDaoTableau implements PizzaDaoFactory {
 
 	private ArrayList<Pizza> pizzas = new ArrayList<Pizza>() {
 		{

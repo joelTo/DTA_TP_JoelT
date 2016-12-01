@@ -12,7 +12,7 @@ public class UpdatePizza extends Action {
 
 	public UpdatePizza(IhmUtil e) {
 		super();
-		this.setDescription("Mettre à jour une pizza");
+		this.setDescription("Mettre ï¿½ jour une pizza");
 		this.ihmUtil = e;
 	}
 
@@ -31,9 +31,9 @@ public class UpdatePizza extends Action {
 		System.out.println("Veuillez entrer la modification  du prix de votre Pizza");
 		Double saisiePrix = ihmUtil.getScanner().nextDouble();
 
-		System.out.println("Veuillez entrer le Catégorie de la nouvelle pizza s'il vous plait");
+		System.out.println("Veuillez entrer le Catï¿½gorie de la nouvelle pizza s'il vous plait");
 		Stream.of(CategoriePizza.values())
-				.forEach(System.out::println); /* Lister les enum créé */
+				.forEach(System.out::println); /* Lister les enum crï¿½ï¿½ */
 
 		String catPizza = ihmUtil.getScanner().next();
 
