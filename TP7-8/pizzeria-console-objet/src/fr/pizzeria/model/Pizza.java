@@ -5,7 +5,7 @@ public class Pizza {
 	private int id;
 	private String code;
 	private String nom;
-	private double prix;
+	private Double prix;
 	private CategoriePizza catPizza;
 
 	public CategoriePizza getCatPizza() {
@@ -17,7 +17,6 @@ public class Pizza {
 	}
 
 	private static int nbPizzas;
-	
 
 	public Pizza(int id, String code, String nom, CategoriePizza catPizza, double prix) {
 		super();
@@ -63,11 +62,11 @@ public class Pizza {
 		this.nom = nom;
 	}
 
-	public double getPrix() {
+	public Double getPrix() {
 		return prix;
 	}
 
-	public void setPrix(double prix) {
+	public void setPrix(Double prix) {
 		this.prix = prix;
 	}
 

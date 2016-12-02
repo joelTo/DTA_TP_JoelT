@@ -61,4 +61,7 @@ public class PizzaDaoTableau implements PizzaDaoFactory {
 		return numIsValide(Integer.parseInt(numPizza)) && code.isEmpty() && nom.isEmpty() && prix != 0;
 	}
 
+	public ArrayList<Pizza> listPizza() {
+		return pizzas;
+	}
 }
